@@ -1,38 +1,738 @@
-.App {
-  text-align: center;
+/*Start page settings */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*End page settings */
+
+/*Start mainapp page design */
+.MainApp {
+  display: grid;
+  grid-template-rows: 10vh auto 30vh;
+  width: 99%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*End mainapp page design */
+
+/*Start Header page design */
+
+.HederMobile {
+  display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.HeaderDesktop {
+  display: grid;
+  grid-template-columns: 30vw 60vw 10vw;
+  justify-items: center;
+  align-items: center;
+  height: 10vh;
+}
+
+
+.Nav {
+  width: 100%;
+}
+
+.Nav input {
+  display: none;
+}
+
+.Nav_toggle {
+  display: none;
+}
+
+.Nav svg {
+  display: none;
+}
+
+.Nav ul {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.Nav ul li {
+  list-style: none;
+  padding: 1vw;
+}
+
+.Header_Shoppingcard {
+  height: 6vh;
+  width: 6vw;
+}
+
+/*End Header page design */
+
+/*Start main page desing */
+.Main {
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(17, 10vh);
+  gap: 10px;
+
+}
+
+/*Start hero page design*/
+.Hero {
+
+  grid-column: 1/ span 12;
+  grid-row: 1/ span 4;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 6vh);
+  gap: 10px;
+}
+
+.Hero_Info {
+
+  background-color: #495E57;
+  grid-column: 1 / span 12;
+  grid-row: 1 / span 5;
+  display: grid;
+}
+
+.Hero_Info h1 {
+  grid-column: 2 / span 4;
+  grid-row: 2/span 1;
+  font-size: 60px;
+  color: #F4CE14;
+  margin-top: -12px;
+}
+
+.Hero_Info h2 {
+  grid-column: 2/ span 4;
+  grid-row: 3/ span 1;
+  font-size: 40px;
+  color: white;
+  margin-top: -31px;
+}
+
+.Hero_Info h3 {
+  grid-column: 2 / sapn 6;
+  grid-row: 4/ span 2;
+  width: 50vw;
+}
+
+.Hero_Info button {
+  grid-column: 2/span 1;
+  grid-row: 6/span 1;
+  border-radius: 16px;
+  background-color: #F4CE14;
+  margin-bottom: 12px;
+}
+
+.Hero_Img {
+  grid-column: 10/ span 3;
+  grid-row: 2/ span 4;
+
+}
+
+.Hero img {
+  height: 34vh;
+  border-radius: 16px;
+  width: 15vw;
+}
+
+/*End hero page design*/
+
+/*Start highlights page design*/
+.Highlights {
+  grid-column: 1/ span 12;
+  grid-row: 5 / span 6;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 6vh 2fr;
+}
+
+.Highlights>h1 {
+  grid-column: 2 / span 2;
+  grid-row: 1/1;
+  margin-top: -8vh;
+  margin-left: 3vw;
+}
+
+.Highlights>button {
+  grid-column: 10/ span 2;
+  border-radius: 16px;
+  background-color: #F4CE14;
+}
+
+.Highlights_Specialoffer {
+  grid-column: 1/ span 12;
+  grid-row: 2 / span 1;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+
+}
+
+.Highlights_Specialoffer_Infomation {
+
+  width: 25vw;
+  background-color: #EDEFEE;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: repeat(6, 10vh); */
+  grid-auto-flow: column;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.Highlights_Specialoffer_Infomation img {
+  grid-column: 1/ span 3;
+  grid-row: 1/ span 3;
+  height: 25vh;
+  width: 100%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.Highlights_Specialoffer_Infomation h1 {
+  grid-column: 1/ span 2;
+  grid-row: 4/ span 1;
+  font-size: 18px;
+  margin-top: -1vh;
+  margin-left: 1vw;
+}
+
+.Highlights_Specialoffer_Infomation h2 {
+  grid-column: 3/ span 1;
+  grid-row: 4/ span 1;
+  font-size: 16px;
+  margin-top: -1vh;
+  margin-left: 3vw;
+}
+
+.Highlights_Specialoffer_Infomation h3 {
+  grid-column: 1/ span 3;
+  grid-row: 4/ span 3;
+  padding: 8px;
+  margin-top: 3vh;
+
+}
+
+.Highlights_Specialoffer_Infomation button {
+  grid-column: 1/ span 3;
+  grid-row: 7/ span 1;
+  width: 20vw;
+  margin-left: 1.5vw;
+  margin-bottom: 3vh;
+  border: none;
+  border-radius: 16px;
+}
+
+/*End highlights page design */
+
+/*Start testimonials start page*/
+.Testiminials {
+  grid-column: 1/ span 12;
+  grid-row: 11/ span 3;
+  background-color: #495E57;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.Testiminials_Data {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+  width: 100%;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.Testiminials_Data_Information {
+
+  width: 12vw;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 7vw 5vw;
+  grid-template-rows: 4vh 12vh 4vh;
+}
+
+.Testiminials_Data_Information_rating {
+  grid-column: 1 / span 1;
+  grid-row: 1/ span 1;
+}
+
+.Testiminials_Data_Information_name {
+  grid-column: 2/span 1;
+  grid-row: 2/ span 1;
+}
+
+
+
+.Testiminials_Data_Information img {
+  width: 6vw;
+  height: 6vw;
+  grid-column: 1/ span 1;
+  grid-row: 2/ span 1;
+}
+
+.Testiminials_Data_Information_message {
+  grid-column: 1/ span 1;
+  grid-row: 3/ span 1;
+}
+
+/*End  testimonials start page*/
+
+/*Start about page design*/
+.about {
+  grid-column: 1/ span 12;
+  grid-row: 14/ span 4;
+  display: flex;
+  flex-direction: row;
+}
+
+.About_Info {
+  width: 50%;
+}
+
+.About_Img {
+  width: 50%;
+}
+
+.About_Info h1 {
+  font-size: 60px;
+  color: #F4CE14;
+  margin-left: 2vw;
+}
+
+.About_Info h2 {
+  font-size: 40px;
   color: white;
+  margin-left: 2vw;
 }
 
-.App-link {
-  color: #61dafb;
+.About_Info p {
+  margin-top: 5vh;
+  margin-right: 5vw;
+  margin-left: 2vw;
+  text-align: justify;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.About_Img img {
+  height: 20vh;
 }
+
+.About_Img_1 {
+  margin-left: 15vw;
+  margin-top: 10vh;
+}
+
+.About_Img_2 {
+  margin-top: -15vh;
+  margin-left: 23vw;
+}
+
+/*End start page design*/
+
+/*End main page design */
+
+/*Start footer page desing */
+.Footer {
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.Footer_Logo {
+  display: flex;
+  align-items: center;
+}
+
+.Footer_Logo img {
+  height: 6vh;
+  width: 19vw;
+}
+
+.Footer_Navigation>h1 {
+  font-size: larger;
+}
+
+.Footer_Navigation>h2 {
+  font-size: larger;
+}
+
+.Footer_Navigation>ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.Footer_Navigation>li {
+  list-style: none;
+}
+
+.Footer_Contact>h1 {
+  font-size: larger;
+  margin-bottom: 30px;
+}
+
+.Footer_Contact>h2 {
+  font-size: small;
+}
+
+.Footer_SocialMedia>h1 {
+  font-size: larger;
+}
+
+/*End footer page design */
+
+/* Start booking page design */
+.Booking {
+  grid-column: 1/ span 12;
+  border: 1px solid green;
+  grid-row: 5/ span 6;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 100px);
+  gap: 10px;
+}
+
+.booking_Heading {
+  grid-column: 1/ span 12;
+  grid-row: 1/ span 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking_form {
+  grid-column: 1/ span 12;
+  grid-row: 2/ span 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+}
+
+.booking_form form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.booking_contact_info {
+  border: none;
+  display: grid;
+  width: 60vw;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+  padding-left: 10px;
+  align-content: center;
+}
+
+#id_lb_booking_firstname {
+  grid-column: 1/ span 1;
+  grid-row: 1/ span 1;
+}
+
+#id_in_booking_firstName {
+  grid-column: 1/ span 1;
+  grid-row: 2/ span 1;
+}
+
+#id_lb_booking_lastname {
+  grid-column: 2/ span 1;
+  grid-row: 1/ span 1;
+}
+
+#id_in_booking_lastName {
+  grid-column: 2/ span 1;
+  grid-row: 2/ span 1;
+}
+
+#id_in_booking_email {
+  grid-column: 3/ span 1;
+  grid-row: 1/ span 1;
+}
+
+#id_in_booking_email {
+  grid-column: 3/ span 1;
+  grid-row: 2/ span 1;
+}
+
+.booking_datetimeguest {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: repeat(4, 20px);
+  row-gap: 15px;
+  column-gap: 10px;
+  padding-left: 10px;
+  border: none;
+
+}
+
+.cl_in_booking {
+  height: 5vh;
+  font-size: large;
+}
+
+.cl_lb_booking_contact_info {
+  margin-top: 15px;
+}
+
+#id_lb_booking_datatimeguest_date {
+  grid-column: 1/ span 1;
+  grid-row: 1 / span 1;
+}
+
+#id_in_booking_datatimeguest_date {
+  grid-column: 1/ span 1;
+  grid-row: 2/ span 1;
+}
+
+#id_lb_booking_datatimeguest_time {
+  grid-column: 2/ span 1;
+  grid-row: 1/ span 1;
+}
+
+#id_in_booking_datatimeguest_time {
+  grid-column: 2/ span 1;
+  grid-column: 2 / span 1;
+
+}
+
+#id_in_booking_datatimeguest_time {
+  grid-column: 2/ span 1;
+  grid-row: 2/ span 1;
+}
+
+#id_lb_booking_datatimeguest_guest {
+  grid-column: 1/ span 1;
+  grid-row: 3/ span 1;
+}
+
+#id_in_booking_datatimeguest_guest {
+  grid-column: 1/ span 1;
+  grid-row: 4/ span 1;
+}
+
+#id_lb_booking_datatimeguest_occasion {
+  grid-column: 2/ span 1;
+  grid-row: 3/ span 1;
+}
+
+#id_in_booking_datatimeguest_occasion {
+  grid-column: 2/ span 1;
+  grid-row: 4/ span 1;
+}
+
+.booking_seatingOptions {
+  display: grid;
+  grid-template-columns: 140px 15px 50px;
+  grid-template-rows: 20px 20px;
+  gap: 10px;
+  width: 60vw;
+  padding-left: 10px;
+  border: none;
+  margin-top: 10px;
+}
+
+.cl_lb_booking_datatimeguest {
+  margin-top: 10px;
+}
+
+#id_lb_booking_seatingOptions {
+  grid-column: 1 /span 1;
+  grid-row: 1/ span 2;
+}
+
+
+
+#id_in_booking_seatingOptions_outside {
+  grid-column: 2 /span 1;
+  grid-row: 1/ span 1;
+}
+
+#id_lb_booking_seatingOptions_outside {
+  grid-column: 3/ span 1;
+  grid-row: 1/ span 1;
+  margin-top: -3px;
+}
+
+#id_in_booking_seatingOptions_inside {
+  grid-column: 2/ span 1;
+  grid-row: 2/ span 1;
+}
+
+#id_lb_booking_seatingOptions_inside {
+  grid-column: 3/ span 1;
+  grid-row: 2/ span 1;
+  margin-top: -3px;
+}
+
+
+
+.cl_btn_Booking_button {
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+  border: none;
+}
+
+#id_btn_booking {
+  width: 20vw;
+  border-radius: 16px;
+  background-color: #F4CE14;
+}
+
+/* End booking page design */
+
+/*Start booking conformation page design*/
+.cl_bookingconfig {
+ 
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column: 1 / span 12;
+  grid-row: 5/ span 6;
+  gap: 10px;
+  grid-template-rows: 49px 2fr 49px;
+
+}
+
+.cl_bookingconfig h1 {
+  grid-column: 1/ span 12;
+  grid-row: 1/ span 1;
+  text-align: center;
+}
+
+.cl_bookingconfig table {
+  grid-column: 6/ span 2;
+    grid-row: 2/ span 1;
+}
+
+.cl_bookingconfig button {
+  grid-column: 6/ span 2;
+  grid-row: 3/ span 1;
+  border-radius: 16px;
+  background-color: #F4CE14;
+}
+
+/*End booking conformation page design*/
+
+/*Start booking confirm message page design*/
+.BookingMEssage{
+  grid-column: 1/ span 12;
+  grid-row: 5/ span 5;
+ 
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.BookingMEssage h1{
+  margin-top: -7vh;
+    margin-bottom: 16vh;
+}
+
+.BookingMEssage h2{
+  margin-left: -27vw;
+    margin-bottom: 5vh;
+}
+
+.BookingMEssage p{
+  margin-left: 15vw;
+    margin-bottom: 10vh;
+}
+
+.BookingMEssage button{
+  width: 20vw;
+    height: 5vh;
+    border-radius: 16px;
+    background-color: #F4CE14;
+}
+/*End booking confirm message page design*/
+
+/*Start mobile design */
+@media only screen and (max-width: 660px) {
+
+  /*Start header design */
+  .HeaderDesktop {
+    display: none;
+  }
+
+  .HederMobile {
+    display: grid;
+    grid-template-columns: 30vw 50vw 20vw;
+    border: 1px solid green;
+    width: 100%;
+    height: 10vh;
+    padding-top: 2vh;
+  }
+
+  .Nav_toggle svg {
+    height: 7vh;
+    width: 7vw;
+    margin-left: 2vw;
+  }
+
+  .Nav {
+    display: block;
+  }
+
+  .Nav_toggle {
+    display: block;
+    padding: 1vh 0 2vh 2vw;
+  }
+
+  .Header_Shoppingcard {
+    height: 7vh;
+    width: 7vw;
+    margin-left: 8vw;
+  }
+
+  .Nav svg {
+    display: inline;
+    height: 7vw;
+    width: 7vw;
+  }
+
+  svg.Nav_closeicons {
+    display: none;
+  }
+
+  .Nav ul {
+    display: block;
+  }
+
+  .Nav ul li {
+    display: none;
+  }
+
+  #Nav_checkbox:checked~label.Nav_toggle .Nav_closeicons {
+    display: inline;
+  }
+
+  #Nav_checkbox:checked~label.Nav_toggle .Nav_menuicons {
+    display: none;
+  }
+
+  #Nav_checkbox:checked~ul li {
+    display: flex;
+    /* position: relative; */
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 0.25rem;
+    background-color: lightgray;
+    /* top: 3rem; */
+    font-weight: bold;
+    width: 10rem;
+    align-items: center;
+  }
+
+  /*End header design */
+
+}
+
+/*End mobile design */
