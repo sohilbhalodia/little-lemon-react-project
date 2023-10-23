@@ -417,6 +417,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-top: -20px;
 }
 
 .booking_contact_info {
@@ -424,7 +425,7 @@
   display: grid;
   width: 60vw;
   grid-template-columns: 2fr 2fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 10px;
   gap: 6px;
   padding-left: 10px;
   align-content: center;
@@ -460,10 +461,33 @@
   grid-row: 2/ span 1;
 }
 
+#id_booking_p_firstname{
+  grid-column: 1/ span 1;
+    grid-row: 3/ span 1;
+    font-size: small;
+    color: red;
+}
+
+#id_booking_p_lastname{
+  grid-column: 2/span 1;
+  grid-row: 3 / span 1;
+  font-size: small;
+  color: red;
+}
+
+#id_booking_p_email{
+  grid-column: 3/ span 1;
+  grid-row: 3/ span 1;
+  font-size: small;
+  color:red;
+}
+
+
+
 .booking_datetimeguest {
   display: grid;
   grid-template-columns: 2fr 2fr;
-  grid-template-rows: repeat(4, 20px);
+  grid-template-rows: repeat(6, 20px);
   row-gap: 15px;
   column-gap: 10px;
   padding-left: 10px;
@@ -490,6 +514,13 @@
   grid-row: 2/ span 1;
 }
 
+#id_p_booking_datatimeguest_date{
+  grid-column: 1/ span 1;
+  grid-row: 3/ span 1;
+  font-size: small;
+  color: red;
+}
+
 #id_lb_booking_datatimeguest_time {
   grid-column: 2/ span 1;
   grid-row: 1/ span 1;
@@ -501,29 +532,51 @@
 
 }
 
-#id_in_booking_datatimeguest_time {
+#id_p_booking_datatimeguest_time{
   grid-column: 2/ span 1;
-  grid-row: 2/ span 1;
+  grid-row: 3/ span 1;
+  font-size: small;
+  color: red;
 }
 
 #id_lb_booking_datatimeguest_guest {
   grid-column: 1/ span 1;
-  grid-row: 3/ span 1;
+  grid-row: 4/ span 1;
+  margin-top: -5px;
 }
 
 #id_in_booking_datatimeguest_guest {
   grid-column: 1/ span 1;
-  grid-row: 4/ span 1;
+  grid-row: 5/ span 1;
+  margin-top: -5px;
+}
+
+#id_p_booking_datatimeguest_Guest{
+  grid-column: 1 / span 1;
+  grid-row: 6 / span 1;
+  font-size: small;
+  color: red;
+  margin-top: -5px;
 }
 
 #id_lb_booking_datatimeguest_occasion {
   grid-column: 2/ span 1;
-  grid-row: 3/ span 1;
+  grid-row: 4/ span 1;
+  margin-top: -5px;
 }
 
 #id_in_booking_datatimeguest_occasion {
   grid-column: 2/ span 1;
-  grid-row: 4/ span 1;
+  grid-row: 5/ span 1;
+  margin-top: -5px;
+}
+
+#id_p_booking_datatimeguest_occassion{
+  grid-column: 2/ span 1;
+  grid-row: 6/ span 1;
+  font-size: small;
+  color: red;
+  margin-top: -5px;
 }
 
 .booking_seatingOptions {
@@ -538,7 +591,7 @@
 }
 
 .cl_lb_booking_datatimeguest {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 #id_lb_booking_seatingOptions {
